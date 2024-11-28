@@ -11,25 +11,8 @@ import umc.study.service.StoreService.StoreQueryService;
 @SpringBootApplication
 @EnableJpaAuditing
 public class StudyApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(StudyApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner run(ApplicationContext context){
-		return args -> {
-			StoreQueryService storeService = context.getBean(StoreQueryService.class);
-
-			String name = "요아정";
-			Float score = 4.0f;
-
-			System.out.println("Executing findStoreByNameAndScore with parameters");
-			System.out.println("Name: " + name);
-			System.out.println("Score: " + score);
-
-			storeService.findStoresByNameAndScore(name, score)
-					.forEach(System.out::println);
-		};
-	}
 }
