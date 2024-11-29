@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import umc.study.domain.Store;
 import umc.study.repository.StoreRepository.StoreRepository;
-import umc.study.repository.StoreRepository.StoreRepositoryCustom;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,6 +15,7 @@ import java.util.Optional;
 public class StoreQueryServiceImpl implements StoreQueryService{
 
     private final StoreRepository storeRepository;
+
     @Override
     public Optional<Store> findStore(Long id) {
         return storeRepository.findById(id);

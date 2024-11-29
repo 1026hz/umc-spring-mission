@@ -1,8 +1,9 @@
 package umc.study.domain;
 
-import jakarta.persistence.*;
 import lombok.*;
 import umc.study.domain.common.BaseEntity;
+
+import jakarta.persistence.*;
 
 @Entity
 @Getter
@@ -20,5 +21,4 @@ public class ReviewImage extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "review_id")
     private Review review;
-
 }
