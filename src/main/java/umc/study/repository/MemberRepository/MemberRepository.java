@@ -1,4 +1,4 @@
-package umc.study.repository;
+package umc.study.repository.MemberRepository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

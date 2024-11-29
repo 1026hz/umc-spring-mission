@@ -28,17 +28,13 @@ public class MemberConverter {
             case 2:
                 gender = Gender.FEMALE;
                 break;
-            case 3:
-                gender = Gender.NONE;
-                break;
         }
 
         return Member.builder()
                 .address(request.getAddress())
-                .specAddress(request.getSpecAddress())
                 .gender(gender)
-                .name(request.getName())
-                .memberPreferList(new ArrayList<>())
+                .nickname(request.getNickname())
+                .memberPreferList(new ArrayList<>()) //리스트 초기화
                 .build();
     }
 }

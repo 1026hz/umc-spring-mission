@@ -15,6 +15,8 @@ public class MemberRequestDTO {
     @Getter
     public static class JoinDto{
         @NotBlank
+        String nickname;
+        @NotBlank
         String name;
         @NotNull
         Integer gender;
